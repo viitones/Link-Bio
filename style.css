@@ -1,0 +1,290 @@
+:root{
+    --fundo: linear-gradient(90deg, #ffdf00, #009c3b);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+html{
+    height: 100vh;
+    font-size: 14px;
+}
+
+
+/* video */
+video{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+
+/* perfil */
+
+.first-section{
+    width: 100%;
+    max-width: 1300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+
+.perfil{
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
+    background-image: url(/assets/neymar.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+}
+
+.perfil::before{
+    content: "";
+    position: absolute;
+    inset: -5px; 
+    z-index: -1; 
+    background: var(--fundo);
+    border-radius: 50%;
+}
+
+.nickname{
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 2px 4px 5px #000000;
+    position: relative;
+    cursor: default;
+}
+
+.nickname h1::before{
+    content: "";
+    background: var(--fundo);
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    border-radius: 5px;
+}
+
+.nickname h1::after{
+    content: "";
+    position: absolute;
+    background: url(/assets/verificado.png);
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    top: 50%;
+}
+
+
+/* links */
+
+.links-div{
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 80%;
+    max-width: 500px;
+}   
+
+.links-div a{
+    text-decoration: none;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    background-color: #0200006e;
+    border-radius: 15px;
+
+    /* width: 100%; */
+    padding: 5px;
+
+    position: relative;
+
+    transition: .2s ease-in-out;
+}
+
+
+.links-div a:hover{
+    background-color: #fff;
+    color: #020000;
+    transform: scale(1.1);
+}
+
+.links-div:hover :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+}
+
+
+/* .links-div a:hover .links-div a:not(hover){
+    background-color: red;
+} */
+
+
+.links-div a:nth-child(1)::before{
+    content: "";
+    background: url(/assets/youtube.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 10px;
+}
+
+
+.links-div a:nth-child(2)::before{
+    content: "";
+    background: url(/assets/instagram.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 10px;
+}
+.links-div a:nth-child(3)::before{
+    content: "";
+    background: url(/assets/twitter.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 10px;
+}
+.links-div a:nth-child(4)::before{
+    content: "";
+    background: url(/assets/facebook.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 10px;
+}
+.links-div a:nth-child(5)::before{
+    content: "";
+    background: url(/assets/twitch.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 10px;
+}
+
+
+/* parte 2 */
+
+.second-section {
+    background-image: url(/assets/imagem-de-fundo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    cursor: default;
+}
+
+.second-section h2{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 4px 2px #000000;
+}
+
+
+table{
+    width: 100%;
+    max-width: 900px;
+}
+
+table thead tr th{
+    background-color: #000000cc;
+
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-shadow: 0 4px 2px #000000;
+}
+
+table th, tr td{
+    padding: 20px;
+}
+
+table tbody tr img{
+    width: 30px;
+}
+
+table tbody td:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #ffffffcc;
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #000000cc;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
